@@ -13,8 +13,9 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install virtualenv
-    virtualenv myenv
+    python3 -V
+    sudo apt install python3-venv
+    python3 -m venv myenv
     source myenv/bin/activate
     pip install -r requirements.txt
   displayName: 'Install dependencies'
