@@ -15,10 +15,10 @@ steps:
     python -m pip install --upgrade pip
     pip install virtualenv
     virtualenv myenv
-    myenv/Scripts/activate
+    source myenv/bin/activate
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
 - script: |
     python manage.py runserver
-  displayName: 'StartServer'
+  displayName: 'Start Local Server'
